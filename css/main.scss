@@ -60,13 +60,13 @@ $theme-dark: #222;
  /*   } */
     .portfolio-box img {
         width: 100%; /* Fill the width of the container */
-        height: calc(100% / 1.77); /* 16:9 aspect ratio calculation */
+        height: calc(100% / 1.6); /* 16:9 aspect ratio calculation */
         object-fit: cover; /* Ensure the image is cropped while keeping its proportions */
     }
-    .portfolio-box {
-        position: relative;
-        overflow: hidden; /* Ensures any cropped parts of the image are hidden */
-    }
+//    .portfolio-box {
+   //     position: relative;
+     //   overflow: hidden; /* Ensures any cropped parts of the image are hidden */
+   // }
  //   .portfolio-box {
  //       height: auto; /* Responsive height for the container */
  //       aspect-ratio: 16 / 9; /* CSS property for defining aspect ratio */
