@@ -53,3 +53,9 @@ $theme-dark: #222;
         margin: 0 auto;
         display: block;
     }
+    .portfolio-box img {
+        width: 100%; /* Stretch to fit the container width */
+        height: 250px; /* Set a fixed height for uniformity */
+        object-fit: cover; /* Crop the image while maintaining proportions */
+    }
+    
