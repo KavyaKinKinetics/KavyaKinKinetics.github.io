@@ -53,9 +53,14 @@ $theme-dark: #222;
         margin: 0 auto;
         display: block;
     }
-    .portfolio-box img {
+ /*  .portfolio-box img {
         width: 100%; /* Stretch to fit the container width */
-        height: 250px; /* Set a fixed height for uniformity */
-        object-fit: cover; /* Crop the image while maintaining proportions */
+ /*       height: 250px; /* Set a fixed height for uniformity */
+ /*       object-fit: cover; /* Crop the image while maintaining proportions */
+ /*   } */
+    .portfolio-box img {
+        width: 100%; /* Fill the width of the container */
+        height: calc(100% / 1.6); /* 16:10 aspect ratio calculation */
+        object-fit: cover; /* Ensure the image is cropped while keeping its proportions */
     }
     
