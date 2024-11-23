@@ -71,33 +71,36 @@ $theme-dark: #222;
  //       height: auto; /* Responsive height for the container */
  //       aspect-ratio: 16 / 9; /* CSS property for defining aspect ratio */
  //   } 
-    .portfolio-box {
-        position: relative;
-        width: 100%; /* Ensure the box spans its column */
-        aspect-ratio: 16 / 10; /* Enforce 16:10 ratio */
-        overflow: hidden; /* Prevent overflow caused by images */
-        display: flex; /* Ensure alignment */
-        justify-content: center;
-        align-items: center;
-        margin: 0; /* Remove any margin issues */
-    }
-    .row.no-gutter {
-        margin-left: 0;
-        margin-right: 0;
-    }
-    
-    .row.no-gutter [class*='col-'] {
-        padding-left: 0;
-        padding-right: 0;
-    }
-    .row::after {
-        content: "";
-        display: table;
-        clear: both;
-    }
-    .portfolio-box img {
-        width: 100%; /* Full width of the container */
-        height: 100%; /* Ensure height fills container */
-        object-fit: cover; /* Crop images evenly */
-    }
+ .portfolio-box {
+    position: relative;
+    display: flex; /* Ensures alignment */
+    flex-direction: column; /* Stacks content vertically */
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* Ensure it spans the column */
+    aspect-ratio: 16 / 10; /* Keep 16:10 ratio */
+    overflow: hidden; /* Prevent overflow issues */
+    margin: 0; /* Avoid gaps */
+}
+
+.portfolio-box img {
+    width: 100%; /* Ensure full width of the container */
+    height: 100%; /* Maintain aspect ratio */
+    object-fit: cover; /* Crop to fit perfectly */
+    display: block; /* Prevent inline gaps */
+}
+
+.row.no-gutter {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.row.no-gutter [class*='col-'] {
+    padding-left: 0;
+    padding-right: 0;
+}
+.portfolio-box {
+    border: 1px solid red; /* Debug outline */
+}
+
             
