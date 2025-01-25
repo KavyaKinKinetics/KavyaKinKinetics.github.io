@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meet Our Team</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        .team-section {
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .team-section h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .team-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .team-member {
+            text-align: center;
+            max-width: 200px;
+        }
+
+        .team-member img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .team-member h3 {
+            font-size: 18px;
+            margin: 10px 0 5px;
+        }
+
+        .team-member p {
+            font-size: 14px;
+            margin: 0;
+            color: #666;
+        }
+
+        @media (max-width: 768px) {
+            .team-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .team-member {
+                max-width: 100%;
+            }
+
+            .team-member img {
+                width: 120px;
+                height: 120px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="team-section">
+        <h1>Meet Our Team</h1>
+        <div class="team-container">
+            <div class="team-member">
+                <img src="img/teammembers/kavya.jpeg" alt="Kavya Murali Parthasarathy">
+                <h3>Kavya Murali Parthasarathy</h3>
+                <p>Founder and CEO</p>
+                <p>Neuroeconomics, Behavioural Science, Space Economy</p>
+            </div>
+            <div class="team-member">
+                <img src="img/teammembers/ramdas.jpeg" alt="Ramdas Rajan">
+                <h3>Ramdas Rajan</h3>
+                <p>Co-Founder</p>
+                <p>Robotics, Automation, and Entrepreneurship</p>
+            </div>
+            <div class="team-member">
+                <img src="img/teammembers/member.jpeg" alt="Vaishnav">
+                <h3>Vaishnav</h3>
+                <p>Director</p>
+                <p>MBBS</p>
+            </div>
+            <div class="team-member">
+                <img src="img/teammembers/member.jpeg" alt="Fikri">
+                <h3>Fikri</h3>
+                <p>Designation</p>
+                <p>AI/ML, Data Scientist</p>
+            </div>
+            <div class="team-member">
+                <img src="img/teammembers/member.jpeg" alt="Member5">
+                <h3>Member5</h3>
+                <p>Designation</p>
+                <p>Expert in</p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
