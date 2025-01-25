@@ -100,5 +100,16 @@ $theme-dark: #222;
     height: 100%; /* Ensure height fills container */
     object-fit: cover; /* Crop images evenly */
 }
+.team-img {
+    border-radius: 50%; /* This makes the image round */
+    width: 5cm; /* Set the diameter of the image to 5cm */
+    height: 5cm; /* Keep the height equal to the width for a perfect circle */
+    object-fit: cover; /* Ensures the image fits within the circle */
+}
+
+.team-name {
+    font-weight: bold; /* Makes the name bold */
+}
+
 
             
