@@ -1,86 +1,72 @@
----
----
 @charset "utf-8";
 
-// Example Defaults
-// $base-font-family: Helvetica, Arial, sans-serif;
-// $base-font-size:   16px;
-// $small-font-size:  $base-font-size * 0.875;
-// $base-line-height: 1.5;
-
-// $spacing-unit:     30px;
-
-// $text-color:       #111;
-// $background-color: #fdfdfd;
-// $brand-color:      #2a7ae2;
-
-// $grey-color:       #828282;
-// $grey-color-light: lighten($grey-color, 40%);
-// $grey-color-dark:  darken($grey-color, 25%);
-
-// // Width of the content area
-// $content-width:    800px;
-
-// $on-palm:          600px;
-// $on-laptop:        800px;
-
-// Using media queries with like this:
-// @include media-query($on-palm) {
-//     .wrapper {
-//         padding-right: $spacing-unit / 2;
-//         padding-left: $spacing-unit / 2;
-//     }
-// }
-
-// variables.less
-$theme-primary: #F05F40;
+// Variables
+$base-font-family: Helvetica, Arial, sans-serif;
+$base-font-size: 16px;
+$theme-primary: #F05F40; // Orange color for theme
 $theme-dark: #222;
 
-// Import partials from `sass_dir` (defaults to `_sass`)
-@import
-        "mixins",
-        "base"
-;
-.footer .text-right.text-gray {
-        display: none;
+// Mixins
+@mixin media-query($max-width) {
+    @media (max-width: $max-width) {
+        @content;
     }
-    .footer .text-right.text-gray {
-        display: none !important;
-    }
-    .content-image {
-        max-width: 100%;
-        height: auto;
-        margin: 0 auto;
-        display: block;
-    }
- /*  .portfolio-box img {
-        width: 100%; /* Stretch to fit the container width */
- /*       height: 250px; /* Set a fixed height for uniformity */
- /*       object-fit: cover; /* Crop the image while maintaining proportions */
- /*   } */
- /*   .portfolio-box img {
-        width: 100%; /* Fill the width of the container */
- /*       height: calc(100% / 1.6); /* 16:10 aspect ratio calculation */
- /*       object-fit: cover; /* Ensure the image is cropped while keeping its proportions */
- /*   }
-   .portfolio-box {
-        position: relative;
-        overflow: hidden; /* Ensures any cropped parts of the image are hidden */
- //   }
- //   .portfolio-box {
- //       height: auto; /* Responsive height for the container */
- //       aspect-ratio: 16 / 9; /* CSS property for defining aspect ratio */
- //   } 
- .portfolio-box {
+}
+
+// Base Styles
+body {
+    font-family: $base-font-family;
+    font-size: $base-font-size;
+    line-height: 1.5;
+    color: $theme-dark;
+    background-color: #fdfdfd;
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+// Section Heading Styles
+.section-heading {
+    font-family: $base-font-family;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
     position: relative;
-    width: 100%; /* Ensure the box spans its column */
-    aspect-ratio: 16 / 10; /* Enforce 16:10 ratio */
-    overflow: hidden; /* Prevent overflow caused by images */
-    display: flex; /* Ensure alignment */
+
+    &::after {
+        content: "";
+        display: block;
+        width: 60px;
+        height: 4px;
+        background-color: $theme-primary;
+        margin: 10px auto 0;
+        border-radius: 2px;
+    }
+}
+
+// Portfolio Styles
+.portfolio-box {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    overflow: hidden;
+    display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0; /* Remove any margin issues */
+    margin: 0;
 }
+
+.portfolio-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 .row.no-gutter {
     margin-left: 0;
     margin-right: 0;
@@ -90,43 +76,55 @@ $theme-dark: #222;
     padding-left: 0;
     padding-right: 0;
 }
+
 .row::after {
     content: "";
     display: table;
     clear: both;
 }
-.portfolio-box img {
-    width: 100%; /* Full width of the container */
-    height: 100%; /* Ensure height fills container */
-    object-fit: cover; /* Crop images evenly */
-}
+
+// Team Section Styles
 #team {
-    padding: 60px 0; /* Add padding for spacing */
+    padding: 60px 0;
+
+    .team-img {
+        border-radius: 50%;
+        width: 5cm;
+        height: 5cm;
+        object-fit: cover;
+        margin: 0 auto 15px;
+    }
+
+    .team-name {
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    .team-member {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .team-heading {
+        @extend .section-heading; // Inherit section heading styles
+    }
 }
 
-.team-img {
-    border-radius: 50%; /* This makes the image round */
-    width: 5cm; /* Diameter of the image */
-    height: 5cm; /* Same as width for a perfect circle */
-    object-fit: cover; /* Ensures the image fits without distortion */
-    margin: 0 auto 15px; /* Centers the image and adds spacing below */
+// Footer Styles
+.footer .text-right.text-gray {
+    display: none !important;
 }
 
-.team-name {
-    font-weight: bold; /* Bold the name */
-    margin-bottom: 10px; /* Add spacing below the name */
+// Image Styles
+.content-image {
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    display: block;
 }
-
-.team-member {
-    text-align: center; /* Align all content in the center */
-    margin-bottom: 30px; /* Add spacing between team members */
-}
-
-#team .row {
-    display: flex; /* Flex layout for responsive alignment */
-    flex-wrap: wrap; /* Ensure wrapping on smaller screens */
-    justify-content: center; /* Center all members horizontally */
-}
-
-
-            
