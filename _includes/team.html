@@ -1,36 +1,57 @@
+<style>
+    /* General styles */
+    #team {
+        text-align: center;
+        font-family: sans-serif;
+    }
+    .container {
+        max-width: 900px;
+        margin: auto;
+    }
+    .team-member {
+        display: inline-block;
+        width: 200px; /* Adjust size */
+        margin: 20px;
+        vertical-align: top;
+    }
+    .team-img {
+        width: 120px; /* Smaller image */
+        height: 120px;
+        border-radius: 50%; /* Makes it round */
+        object-fit: cover;
+        display: block;
+        margin: 0 auto 10px;
+    }
+    .team-name {
+        font-weight: bold;
+        font-size: 16px;
+    }
+    .team-role {
+        font-size: 14px;
+        color: black;
+    }
+    .team-expertise {
+        font-size: 12px;
+        color: darkgrey;
+    }
+</style>
+
 <section id="team">
     <div class="container">
         <h2 class="section-heading">Meet Our Team</h2>
         <div class="row">
-            <div class="team-member col-md-3 col-sm-6 text-center">
+            <div class="team-member">
                 <img src="/img/teammembers/kavya.jpeg" alt="Kavya" class="team-img">
                 <h4 class="team-name">Kavya Murali Parthasarathy</h4>
-                <p>Founder and CEO</p>
-                <p>Neuroeconomics, Behavioural Science, Space Economy</p>
+                <p class="team-role">Founder and CEO</p>
+                <p class="team-expertise">Neuroeconomics, Behavioural Science, Space Economy</p>
             </div>
-            <div class="team-member col-md-3 col-sm-6 text-center">
+            <div class="team-member">
                 <img src="/img/teammembers/ramdas.jpeg" alt="Ramdas" class="team-img">
                 <h4 class="team-name">Ramdas Rajan</h4>
-                <p>Co-Founder</p>
-                <p>Robotics, Automation, and Entrepreneurship</p>
+                <p class="team-role">Co-Founder</p>
+                <p class="team-expertise">Robotics, Automation, and Entrepreneurship</p>
             </div>
-     <!--       <div class="team-member col-md-3 col-sm-6 text-center">
-                <img src="img/teammembers/member.jpeg" alt="Vaishnav" class="team-img">
-                <h4 class="team-name">Vaishnav</h4>
-                <p>Director</p>
-                <p>MBBS</p>
-            </div>
-            <div class="team-member col-md-3 col-sm-6 text-center">
-                <img src="img/teammembers/member.jpeg" alt="Fikri" class="team-img">
-                <h4 class="team-name">Fikri</h4>
-                <p>AI/ML, Data Scientist</p>
-            </div>
-            <div class="team-member col-md-3 col-sm-6 text-center">
-                <img src="img/teammembers/member.jpeg" alt="Member5" class="team-img">
-                <h4 class="team-name">Member5</h4>
-                <p>Designation</p>
-                <p>Expert in</p>
-            </div> -->
         </div>
     </div>
 </section>
