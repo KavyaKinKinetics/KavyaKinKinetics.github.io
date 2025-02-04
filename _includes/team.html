@@ -1,69 +1,14 @@
-<style>
-    /* General styles */
-    #team {
-        text-align: center;
-        font-family: sans-serif;
-    }
-    .container {
-        max-width: 900px;
-        margin: auto;
-    }
-    
-    /* Flexbox for team members */
-    .row {
-        display: flex;
-        justify-content: center; /* Centers members in a row */
-        flex-wrap: wrap; /* Ensures responsiveness */
-        gap: 20px; /* Adds spacing between members */
-    }
-
-    .team-member {
-        width: 200px; /* Fixed width for consistency */
-        text-align: center;
-    }
-
-    .team-img {
-        width: 200px;  /* Adjust image size */
-        height: 200px;
-        border-radius: 50%; /* Makes it round */
-        object-fit: cover; /* Ensures the image fills the circular space */
-        display: block;
-        margin: 0 auto 10px;
-        border: 5px solid white; /* White border */
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.15); /* Soft shadow around image */
-    }
-
-    .team-name {
-        font-weight: bold;
-        font-size: 16px;
-        margin-bottom: 5px;
-        white-space: nowrap; /* Prevents the name from breaking into multiple lines */
-
-    }
-
-    .team-role {
-        font-size: 14px;
-        color: black;
-        margin-bottom: 5px;
-        white-space: nowrap; /* Prevents the name from breaking into multiple lines */
-
-    }
-
-    .team-expertise {
-        font-size: 12px;
-        color: darkgrey;
-        min-height: 40px; /* Ensures equal height for expertise text */
-    }
-
-</style>
-
-
-
 <section id="team">
     <div class="container">
-        <h2 class="section-heading">Meet Our Team</h2>
-        <hr class="primary">
-        <p> </p>
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2 class="section-heading">Meet Our Team</h2>
+                <hr class="primary">
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
         <div class="row">
             <div class="team-member">
                 <img src="/img/teammembers/kavya.jpeg" alt="Kavya" class="team-img">
@@ -71,6 +16,7 @@
                 <p class="team-role">Founder and CEO</p>
                 <p class="team-expertise">Neuroeconomics, Behavioural Science, Space Economy</p>
             </div>
+
             <div class="team-member">
                 <img src="/img/teammembers/ramdas.jpeg" alt="Ramdas" class="team-img">
                 <h4 class="team-name">Ramdas Rajan</h4>    
