@@ -12,7 +12,7 @@ github_username: ""
 markdown: kramdown
 show_downloads: false
 
-collections:
-  ceo-letters:
-    output: true
-    permalink: /ceo-letters/:path/
+#collections:
+ # ceo-letters:
+  #  output: true
+   # permalink: /ceo-letters/:path/
