@@ -15,3 +15,4 @@ show_downloads: false
 collections:
   ceo-letters:
     output: true
+    permalink: /ceo-letters/:title/
