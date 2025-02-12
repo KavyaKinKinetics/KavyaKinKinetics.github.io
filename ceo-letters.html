@@ -1,0 +1,16 @@
+---
+layout: default
+title: "CEO's Letters"
+permalink: /ceo-letters/
+---
+
+<section id='ceo-letters'>
+    <div class='container'>
+        <h2 class='section-heading'>CEO's Letters</h2>
+        <ul>
+            {% for letter in site.ceo-letters %}
+            <li><a href='{{ letter.url }}'>{{ letter.title }}</a> - {{ letter.date | date: "%Y" }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+</section>
