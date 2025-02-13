@@ -11,8 +11,3 @@ github_username: ""
 # Build settings
 markdown: kramdown
 show_downloads: false
-
-#collections:
- # ceo-letters:
-  #  output: true
-   # permalink: /ceo-letters/:path/
