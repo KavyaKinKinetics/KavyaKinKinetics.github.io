@@ -1,167 +1,87 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Non Invasive Mind Control Robotic Arms</title>
+---
+layout: page
+title: Non Invasive Mind Control Robotic Arms
+date: 2024-12-30
+---
     <style>
-        /* Global Reset */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
 
-        /* Body Styles */
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f4f4f9;
-            color: #333;
-            line-height: 1.6;
-            display: flex;
-            justify-content: center;
-            padding: 20px;
-        }
+    .hashtags {
+        text-align: center;
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 10px;
+    }
 
-        /* Main Container for Content */
-        .content-container {
-            max-width: 900px; /* Width is limited for readability */
-            width: 100%;
-            padding: 20px;
-            background-color: white;
-            border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        }
+    .hashtags a {
+        display: inline-block;
+        margin: 5px;
+        padding: 8px 12px;
+        font-size: 0.9rem;
+        font-weight: bold;
+        text-decoration: none;
+        color: #fff;
+        background-color: #264653; /* Blue button-style hashtags  007bff*/
+        border-radius: 20px;
+        transition: background 0.3s ease;
+    }
 
-        /* Article Header */
-        .article-header {
-            margin-bottom: 20px;
-            text-align: center;
-        }
+    .hashtags a:hover {
+        background-color: #001f3f; /* Darker blue on hover */
+    }
 
-        /* Author Info */
-        .author-info {
-            font-size: 0.9rem;
-            color: #777;
-            text-align: center;
-            margin-bottom: 20px;
-        }
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f5f5f5; /* f8f9fa */
+        color: #333;
+    }
 
-        h1 {
-            color: #000;
-            text-align: center; /* Center-aligning headings */
-            margin-bottom: 20px;
-        }
+    h2 {
+        font-family: "Arial", sans-serif;
+        font-size: 2.5rem;
+        font-weight: bold;
+        color: #001f3f; /* Dark blue for the title */
+        margin-top: 20px;
+    }
 
-        /* Article Section */
-        .article-section {
-            margin-bottom: 20px;
-        }
+    p {
+        font-family: "Arial", sans-serif;
+        font-size: 1rem;
+        line-height: 1.8;
+        text-align: justify; /* Justified text for consistency */
+        margin: 20px auto;
+        max-width: 800px; /* Restrict content width */
+    }
 
-        p, .quote {
-            text-align: justify; /* Justified text for better readability */
-            margin-bottom: 20px;
-            font-size: 1.1rem;
-        }
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
 
-        /* Quote styling */
-        .quote {
-            font-style: italic;
-            color: #555;
-            margin: 10px 0;
-        }
+    img {
+        margin: 20px auto;
+        border-radius: 8px;
+        width: 100%;
+        max-width: 800px; /* Ensure images align with text width */
+        height: auto;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for modern look */
+    }
 
-        /* Image Styling */
-        .article-image {
-            width: 100%;
-            max-width: 850px; /* Image should not stretch full width */
-            height: auto;
-            margin: 20px auto;
-            display: block; /* Centers the image */
-        }
-
-        /* List Styling */
-        ul {
-            margin: 10px 0;
-            padding-left: 20px;
-            list-style-type: disc;
-        }
-
-        li {
-            margin-bottom: 10px;
-        }
-
-        /* Reference Links */
-        a {
-            color: #007BFF;
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
-        /* Share buttons container */
-        .share-buttons {
-            margin-top: 30px;
-            text-align: center;
-            margin-bottom: 30px; /* Adds space at the bottom */
-        }
-
-        .share-buttons h3 {
-            font-size: 1.2rem;
-            margin-bottom: 20px;
-        }
-
-        .share-button {
-            display: inline-block;
-            margin: 10px;
-            padding: 12px 20px;
-            font-size: 1rem;
-            font-weight: bold;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-        }
-
-        .share-button:hover {
-            opacity: 0.8;
-        }
-
-        .facebook {
-            background-color: #3b5998;
-            color: white;
-        }
-
-        .whatsapp {
-            background-color: #25D366;
-            color: white;
-        }
-
-        .linkedin {
-            background-color: #0077b5;
-            color: white;
-        }
-
-        .facebook:hover {
-            background-color: #2d4373;
-        }
-
-        .whatsapp:hover {
-            background-color: #128C7E;
-        }
-
-        .linkedin:hover {
-            background-color: #006687;
-        }
-    </style>
+    .text-muted {
+        font-weight: bold; /* Bold subtitle */
+        color: #264653; /* Subtle gray for subtitle */
+    }
+</style>
 </head>
 <body>
 
     <div class="content-container">
 
         <!-- Image at the top -->
-        <img src="../Images/article3.png" alt="People connecting" class="article-image">
+        <img src="../Images/article3NonInvasiveMindControlRoboticArm.jpg" alt="People connecting" class="article-image">
 
         <!-- Article Header -->
         <div class="article-header">
@@ -181,18 +101,32 @@
 
             <p>The ongoing collaboration between researchers, engineers, and ethicists ensures that as we develop more powerful brain-related technologies, the individual’s dignity and emotional health remain at the forefront of our work. At KinKinetics, the trajectory is clear: we aim to cultivate a balanced synergy between cutting-edge discoveries and human compassion. In doing so, we strengthen the bond between people and the supportive systems we design, forging a future where emotional and psychological care is consistently present, deeply personalized, and readily accessible, no matter where a user may find themselves.</p>
         </div>
-
-        <div class="article-section">
-            <h2>References</h2>
-            <ul>
-                <li><a href="https://engineering.cmu.edu/news-events/news/2019/06/20-he-sci-robotics.html">Emily Durham "First-ever noninvasive mind-controlled robotic arm"</a></li>
-                <li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8517469/">Clin Exp Emerg Med 2023: "Secondary hypoxic ischemia alters neurobehavioral outcomes, neuroinflammation, and oxidative stress in mice exposed to controlled cortical impact
-                    "</a></li>
-            </ul>
+    </div>
+     <div class="hashtags">
+            <a href="https://www.google.com/search?q=AI" target="_blank">#AI</a>
+            <a href="https://www.google.com/search?q=BCI" target="_blank">#BCI</a>
+            <a href="https://www.google.com/search?q=Neuroscience" target="_blank">#Neuroscience</a>
+            <a href="https://www.google.com/search?q=Robotics" target="_blank">#Robotics</a>
+            <a href="https://www.google.com/search?q=AssistiveTech" target="_blank">#AssistiveTech</a>
+            <a href="https://www.google.com/search?q=HumanAugmentation" target="_blank">#HumanAugmentation</a>
+            <a href="https://www.google.com/search?q=MindControlledTech" target="_blank">#MindControlledTech</a>
+            <a href="https://www.google.com/search?q=FutureOfHealthcare" target="_blank">#FutureOfHealthcare</a>
+            <a href="https://www.google.com/search?q=EthicalAI" target="_blank">#EthicalAI</a>
+            <a href="https://www.google.com/search?q=Neurotechnology" target="_blank">#Neurotechnology</a>
+            <!--replace the hashtags with kinkinetics article section for people to stick to our website-->
         </div>
+        
+           <!-- References Section  -->
+           <div class="references">
+           <h3>References</h3>
+            <ol>
+                <li><a href="https://engineering.cmu.edu/news-events/news/2019/06/20-he-sci-robotics.html">Durham, E. (2019) 'First-ever noninvasive mind-controlled robotic arm', Carnegie Mellon University College of Engineering, 20 June.</a></li>
+                <li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8517469/">Clin Exp Emerg Med 2023: "Secondary hypoxic ischemia alters neurobehavioral outcomes, neuroinflammation, and oxidative stress in mice exposed to controlled cortical impact</a></li>
+            </ol>
+    </div>        
 
         <!-- Share buttons at the bottom of the article -->
-        <div class="share-buttons">
+<!--        <div class="share-buttons">
             <h3>Share this article:</h3>
             <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.kinkinetics.com/Pages/UpdatesPage/Articles/Article2.html" target="_blank" class="share-button facebook">
                 Share on Facebook
@@ -203,7 +137,7 @@
             <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://www.kinkinetics.com/Pages/UpdatesPage/Articles/Article2.html" target="_blank" class="share-button linkedin">
                 Share on LinkedIn
             </a>
-        </div>
+        </div>-->
     </div>
 
 </body>
