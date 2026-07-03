@@ -54,6 +54,11 @@
         .nav-link { position: relative; }
         .nav-link::after { content:''; position:absolute; left:0; bottom:-4px; height:2px; width:0; background:#D4AF37; transition:width .25s ease; }
         .nav-link:hover::after { width:100%; }
+        .glow-text { text-shadow: 0 0 24px rgba(212,175,55,0.45), 0 0 60px rgba(212,175,55,0.22); }
+        .fade-up { opacity: 0; transform: translateY(16px); animation: fadeUp .9s ease forwards; }
+        @keyframes fadeUp { to { opacity: 1; transform: none; } }
+        .scroll-cue { animation: bob 1.8s ease-in-out infinite; }
+        @keyframes bob { 0%,100%{ transform: translateY(0); opacity:.6 } 50%{ transform: translateY(6px); opacity:1 } }
     </style>
 </head>
 <body class="font-sans text-slate-800 bg-white">
@@ -62,7 +67,7 @@
     <header id="nav" class="fixed top-0 inset-x-0 z-50 transition-all duration-300">
         <nav class="max-w-7xl mx-auto px-5 sm:px-8 flex items-center justify-between h-16">
             <a href="#home" class="flex items-center gap-2.5">
-                <span class="grid place-items-center h-9 w-9 rounded-lg bg-kk-dark shrink-0">
+                <span id="navbadge" class="grid place-items-center h-9 w-9 rounded-lg shrink-0 transition-colors">
                     <img src="img/kinkinetics2.png" alt="KinKinetics emblem" class="h-7 w-7 object-contain">
                 </span>
                 <span class="font-display font-bold text-lg tracking-tight text-white" id="brandword">KINKINETICS</span>
@@ -93,43 +98,45 @@
         </div>
     </header>
 
-    <!-- ===== HERO ===== -->
-    <section id="home" class="grid-bg bg-kk-dark text-white relative overflow-hidden">
-        <div class="max-w-7xl mx-auto px-5 sm:px-8 pt-32 pb-24 sm:pt-36 sm:pb-32">
-            <div class="max-w-3xl">
-                <img src="img/kinkinetics2.png" alt="KinKinetics emblem" class="h-14 w-14 object-contain mb-7">
-                <span class="inline-flex items-center gap-2 text-gold-400 text-xs font-semibold tracking-[0.18em] mb-5">
-                    NEUROADAPTIVE SYSTEMS &nbsp;·&nbsp; SENSE → DECIDE → RESPOND
-                </span>
-                <h1 class="font-display font-bold text-4xl sm:text-5xl lg:text-[3.4rem] leading-[1.08] tracking-tight">
-                    When stress runs high, clear thinking is the first thing to go.
-                </h1>
-                <p class="mt-5 text-xl sm:text-2xl font-display font-semibold gold-text">KinKinetics helps you hold it steady.</p>
-                <p class="mt-6 text-lg text-white/80 leading-relaxed max-w-2xl">
-                    We're building a wearable that tracks your body's stress response in real time, catches the shift into overload before you feel it, and gives a calming nudge to help you steady yourself — so your own judgement holds. It starts with healthcare teams under pressure, and it's built for anywhere people have to perform under load.
-                </p>
-                <div class="mt-9 flex flex-col sm:flex-row gap-3">
-                    <a href="#contact" class="inline-flex justify-center items-center rounded-full bg-gold-500 hover:bg-gold-400 text-kk-dark font-semibold px-7 py-3.5 transition">Get in touch</a>
-                    <a href="#product" class="inline-flex justify-center items-center rounded-full border border-white/25 hover:border-white/60 text-white font-semibold px-7 py-3.5 transition">See how it works</a>
-                </div>
+    <!-- ===== HERO (pitch black) ===== -->
+    <section id="home" class="relative min-h-screen flex flex-col bg-black text-white overflow-hidden">
+        <!-- ambient glow -->
+        <div class="pointer-events-none absolute inset-0">
+            <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-[520px] w-[520px] rounded-full bg-gold-500/10 blur-[120px]"></div>
+        </div>
+
+        <!-- centered brand -->
+        <div class="relative flex-1 flex items-center justify-center px-5 text-center">
+            <div>
+                <img src="img/kinkinetics2.png" alt="KinKinetics emblem" class="emblem-glow h-28 w-28 sm:h-36 sm:w-36 object-contain mx-auto mb-8 fade-up">
+                <p class="text-gold-400 text-[11px] sm:text-xs font-semibold tracking-[0.3em] uppercase mb-5 fade-up" style="animation-delay:.15s">Neuroadaptive Systems</p>
+                <h1 class="font-display font-bold tracking-tight text-5xl sm:text-7xl lg:text-8xl glow-text fade-up" style="animation-delay:.25s">KINKINETICS</h1>
+                <p class="mt-6 text-lg sm:text-xl text-white/70 font-display fade-up" style="animation-delay:.4s">Keeping decisions steady under pressure.</p>
             </div>
         </div>
-        <!-- trust strip -->
-        <div class="border-t border-white/10 bg-black/20">
-            <div class="max-w-7xl mx-auto px-5 sm:px-8 py-5 flex flex-wrap items-center gap-x-8 gap-y-3 text-white/60 text-xs sm:text-sm font-medium">
-                <span class="text-white/40 uppercase tracking-wider">Backed &amp; presented</span>
-                <span>KSUM Idea Grant &mdash; non-dilutive</span>
-                <span class="hidden sm:inline text-white/20">|</span>
-                <span>Working Prototype 1</span>
-                <span class="hidden sm:inline text-white/20">|</span>
-                <span>GLEX 2025</span>
-                <span class="hidden sm:inline text-white/20">|</span>
-                <span>NASA HRP</span>
-                <span class="hidden sm:inline text-white/20">|</span>
-                <span>ELGRA</span>
-            </div>
-        </div>
+
+        <!-- scroll cue -->
+        <a href="#problem" class="relative mx-auto mb-10 flex flex-col items-center gap-2 text-white/50 hover:text-gold-400 transition fade-up" style="animation-delay:.6s" aria-label="Scroll to read">
+            <span class="text-[11px] tracking-[0.25em] uppercase">Scroll</span>
+            <svg class="scroll-cue" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
     </section>
+
+    <!-- ===== TRUST STRIP ===== -->
+    <div class="bg-black border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-5 sm:px-8 py-5 flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-white/55 text-xs sm:text-sm font-medium reveal">
+            <span class="text-white/40 uppercase tracking-wider">Backed &amp; presented</span>
+            <span>KSUM Idea Grant &mdash; non-dilutive</span>
+            <span class="hidden sm:inline text-white/20">|</span>
+            <span>Working Prototype 1</span>
+            <span class="hidden sm:inline text-white/20">|</span>
+            <span>GLEX 2025</span>
+            <span class="hidden sm:inline text-white/20">|</span>
+            <span>NASA HRP</span>
+            <span class="hidden sm:inline text-white/20">|</span>
+            <span>ELGRA</span>
+        </div>
+    </div>
 
     <!-- ===== PROBLEM ===== -->
     <section id="problem" class="py-24 bg-white">
@@ -497,16 +504,19 @@
     <script>
         const nav = document.getElementById('nav');
         const brand = document.getElementById('brandword');
+        const badge = document.getElementById('navbadge');
         function onScroll() {
             if (window.scrollY > 40) {
                 nav.classList.add('bg-white','shadow-md');
                 nav.querySelectorAll('#navlinks a').forEach(a=>{a.classList.remove('text-white/85');a.classList.add('text-slate-600');});
                 brand.classList.remove('text-white'); brand.classList.add('text-kk-blue');
+                badge.classList.add('bg-kk-dark');
                 document.getElementById('menuBtn').classList.remove('text-white'); document.getElementById('menuBtn').classList.add('text-kk-blue');
             } else {
                 nav.classList.remove('bg-white','shadow-md');
                 nav.querySelectorAll('#navlinks a').forEach(a=>{a.classList.add('text-white/85');a.classList.remove('text-slate-600');});
                 brand.classList.add('text-white'); brand.classList.remove('text-kk-blue');
+                badge.classList.remove('bg-kk-dark');
                 document.getElementById('menuBtn').classList.add('text-white'); document.getElementById('menuBtn').classList.remove('text-kk-blue');
             }
         }
